@@ -1,0 +1,20 @@
+<jaxb:bindings version="2.0"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               extensionBindingPrefixes="simplify">
+    <jaxb:bindings >
+        <jaxb:globalBindings generateElementProperty="false">
+            <jaxb:serializable uid="1" />
+            <jaxb:javaType
+                    name="org.joda.time.DateTime"
+                    xmlType="xs:dateTime"
+                    parseMethod="com.bir.utils.DateConverter.unmarshalDateTime"
+                    printMethod="com.bir.utils.DateConverter.marshalDateTime" />
+            <jaxb:javaType
+                    name="org.joda.time.DateTime"
+                    xmlType="xs:date"
+                    parseMethod="com.bir.utils.DateConverter.unmarshalDate"
+                    printMethod="com.bir.utils.DateConverter.marshalDate" />
+        </jaxb:globalBindings>
+    </jaxb:bindings>
+</jaxb:bindings>
